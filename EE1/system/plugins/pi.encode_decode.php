@@ -2,7 +2,7 @@
 
 $plugin_info = array(
 	'pi_name'			=> 'Encode/Decode',
-	'pi_version'		=> '1.1',
+	'pi_version'		=> '1.2',
 	'pi_author'			=> 'Nine Four',
 	'pi_author_url'		=> 'http://ninefour.co.uk/labs',
 	'pi_description'	=> 'Encodes and decodes a text string using a number of encoding and decoding methods',
@@ -27,13 +27,13 @@ class encode_decode {
 				if ($style == "base64") {
 					$string = base64_decode($str);
 				} elseif ($style == "htmlspecialchars") {
-					$string = htmlspecialchars($str);
+					$string = htmlspecialchars_decode($str);
 				} elseif ($style == "htmlentities") {
-					$string = htmlentities($str);
+					$string = html_entity_decode($str);
 				} elseif ($style == "uuencode") {
-					$string = convert_uuencode($str);
+					$string = convert_uudecode($str);
 				} elseif ($style == "rawurlencode") {
-					$string = rawurlencode($str);
+					$string = rawurldecode($str);
 				} else {
 					$string = urldecode($str);
 				}
@@ -41,13 +41,13 @@ class encode_decode {
 				if ($style == "base64") {
 					$string = base64_encode($str);
 				} elseif ($style == "htmlspecialchars") {
-					$string = htmlspecialchars_decode($str);
+					$string = htmlspecialchars($str);
 				} elseif ($style == "htmlentities") {
-					$string = html_entity_decode($str);
+					$string = htmlentities($str);
 				} elseif ($style == "uuencode") {
-					$string = convert_uudecode($str);
+					$string = convert_uuencode($str);
 				} elseif ($style == "rawurl") {
-					$string = rawurldecode($str);
+					$string = rawurlencode($str);
 				} else {
 					$string = urlencode($str);
 				}
@@ -89,6 +89,7 @@ direction = 'encode' (default - encode)
 	
 RELEASE NOTES:
 
+1.2 - Corrected out of whack encoding and decoding.
 1.1 - Re-branded as a 'Nine Four' plug-in.
 1.0 - Initial Release.
 
