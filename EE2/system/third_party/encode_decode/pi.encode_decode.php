@@ -98,6 +98,9 @@ class Encode_decode {
 					case "url":
 						$string = urlencode($string);
 						break;
+					case "url_dash":
+						$string = strtr(strtolower(urlencode($string)),'+', '-');
+						break;
 					case "url_safe_base64":
 						$string = base64_encode($string);
 						$replacement_chars = array(

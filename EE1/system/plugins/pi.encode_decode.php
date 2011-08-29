@@ -48,6 +48,8 @@ class encode_decode {
 					$string = convert_uuencode($str);
 				} elseif ($style == "rawurl") {
 					$string = rawurlencode($str);
+				} elseif ($style == "url_dash") {
+					$string = strtr(strtolower(urlencode($string)),'+', '-');
 				} else {
 					$string = urlencode($str);
 				}
