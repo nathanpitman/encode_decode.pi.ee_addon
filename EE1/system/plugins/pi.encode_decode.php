@@ -32,7 +32,7 @@ class encode_decode {
 					$string = html_entity_decode($str);
 				} elseif ($style == "uuencode") {
 					$string = convert_uudecode($str);
-				} elseif ($style == "rawurlencode") {
+				} elseif ($style == "rawurl") {
 					$string = rawurldecode($str);
 				} else {
 					$string = urldecode($str);
@@ -43,7 +43,7 @@ class encode_decode {
 				} elseif ($style == "htmlspecialchars") {
 					$string = htmlspecialchars($str);
 				} elseif ($style == "htmlentities") {
-					$string = htmlentities($str);
+					$string = htmlentities($str, ENT_COMPAT, "UTF-8", false);
 				} elseif ($style == "uuencode") {
 					$string = convert_uuencode($str);
 				} elseif ($style == "rawurl") {

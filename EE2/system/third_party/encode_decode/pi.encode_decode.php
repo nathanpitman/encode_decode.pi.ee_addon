@@ -87,7 +87,7 @@ class Encode_decode {
 						$string = htmlspecialchars($string);
 						break;
 					case "htmlentities":
-						$string = htmlentities($string);
+						$string = htmlentities($string, ENT_COMPAT, "UTF-8", false);
 						break;
 					case "uu":
 						$string = convert_uuencode($string);
