@@ -4,7 +4,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 $plugin_info = array(
   'pi_name' => 'Encode/Decode',
-  'pi_version' => '1.2',
+  'pi_version' => '1.3',
   'pi_author' => 'Nine Four',
   'pi_author_url' => 'http://ninefour.co.uk/labs/',
   'pi_description' => 'Encodes and decodes a text string using a number of encoding and decoding methods',
@@ -45,6 +45,9 @@ class Encode_decode {
 				
 				switch ($style) {
 				
+					case "json":
+						$sting = json_decode($string);
+						break;
 					case "base64":
 						$string = base64_decode($string);
 						break;
@@ -80,6 +83,9 @@ class Encode_decode {
 				
 				switch ($style) {
 				
+					case "json":
+						$string = json_encode($string);
+						break;
 					case "base64":
 						$string = base64_encode($string);
 						break;
