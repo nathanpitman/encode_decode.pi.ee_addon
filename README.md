@@ -5,7 +5,7 @@ This plug-in is designed to help you encode and decode a string of text. Typical
 
 BASIC USAGE:
 
-`{exp:encode_decode style="url" direction="encode"}This is @/ test string{/exp:encode_decode}`
+	{exp:encode_decode style="url" direction="encode"}This is @/ test string{/exp:encode_decode}
 
 PARAMETERS:
 
