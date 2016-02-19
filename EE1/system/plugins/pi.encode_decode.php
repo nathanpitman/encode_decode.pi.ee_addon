@@ -1,12 +1,12 @@
 <?php
 
 $plugin_info = array(
-	'pi_name'			=> 'Encode/Decode',
-	'pi_version'		=> '1.2',
-	'pi_author'			=> 'Nine Four',
-	'pi_author_url'		=> 'http://ninefour.co.uk/labs',
+	'pi_name'		=> 'Encode/Decode',
+	'pi_version'		=> '1.3',
+	'pi_author'		=> 'Nathan Pitman',
+	'pi_author_url'		=> 'https://github.com/nathanpitman/encode_decode.pi.ee_addon',
 	'pi_description'	=> 'Encodes and decodes a text string using a number of encoding and decoding methods',
-	'pi_usage'			=> encode_decode::usage()
+	'pi_usage'		=> encode_decode::usage()
 );
 
 class encode_decode {
@@ -89,14 +89,7 @@ style = 'url' (default - url)
 direction = 'encode' (default - encode)
  - The direction to push the string in: "encode" or "decode".
 	
-RELEASE NOTES:
-
-1.2 - Corrected out of whack encoding and decoding.
-1.1 - Re-branded as a 'Nine Four' plug-in.
-1.0 - Initial Release.
-
-For updates and support check the developers website: http://ninefour.co.uk/labs
-
+For updates and support check the developers website: https://github.com/nathanpitman/encode_decode.pi.ee_addon
 
 <?php
 $buffer = ob_get_contents();
