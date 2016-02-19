@@ -5,8 +5,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 $plugin_info = array(
   'pi_name' => 'Encode/Decode',
   'pi_version' => '1.3',
-  'pi_author' => 'Nine Four',
-  'pi_author_url' => 'http://ninefour.co.uk/labs/',
+  'pi_author' => 'Nathan Pitman',
+  'pi_author_url' => 'https://github.com/nathanpitman/encode_decode.pi.ee_addon',
   'pi_description' => 'Encodes and decodes a text string using a number of encoding and decoding methods',
   'pi_usage' => Encode_decode::usage()
   );
@@ -14,11 +14,11 @@ $plugin_info = array(
 /**
  * Memberlist Class
  *
- * @package			ExpressionEngine
+ * @package		ExpressionEngine
  * @category		Plugin
- * @author			Nine Four
- * @copyright		Copyright (c) 2010, Nine Four Ltd
- * @link			http://ninefour.co.uk/labs/
+ * @author		Nathan Pitman
+ * @copyright		Copyright (c) 2010-2016, Nathan Pitman
+ * @link		https://github.com/nathanpitman/encode_decode.pi.ee_addon
  */
 
 class Encode_decode {
@@ -141,7 +141,7 @@ BASIC USAGE:
 
 PARAMETERS:
 
-string = 'nathan@ninefour.co.uk' (optional)
+string = 'hello@nathanpitman.com' (optional)
  - If you'd rather not use the plug-in as a tag pair, use a single tag and specify the string parameter.
 
 style = 'url' (default - url)
@@ -152,11 +152,12 @@ direction = 'encode' (default - encode)
 	
 RELEASE NOTES:
 
+1.3 - Tweaks to code comments and documentation URL
 1.2 - Added ExpressionEngine 2 compatibility.
 1.1 - Re-branded as a 'Nine Four' plug-in.
 1.0 - Initial Release.
 
-For updates and support check the developers website: http://ninefour.co.uk/labs
+For updates and support check the developers website: https://github.com/nathanpitman/encode_decode.pi.ee_addon
 	<?php
 	$buffer = ob_get_contents();
 	
@@ -168,5 +169,5 @@ For updates and support check the developers website: http://ninefour.co.uk/labs
   
 }
 
-/* End of file pi.url_title_to_entry_id.php */ 
-/* Location: ./system/expressionengine/third_party/url_title_to_entry_id/pi.url_title_to_entry_id.php */
+/* End of file pi.encode_decode.php */ 
+/* Location: ./system/expressionengine/third_party/encode_decode/pi.encode_decode.php */
