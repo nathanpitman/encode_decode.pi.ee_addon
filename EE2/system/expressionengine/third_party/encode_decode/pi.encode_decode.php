@@ -12,7 +12,7 @@ $plugin_info = array(
   );
 
 /**
- * Memberlist Class
+ * Encode_decode Class
  *
  * @package		ExpressionEngine
  * @category		Plugin
@@ -150,14 +150,8 @@ style = 'url' (default - url)
 direction = 'encode' (default - encode)
  - The direction to push the string in: "encode" or "decode".
 	
-RELEASE NOTES:
-
-1.3 - Tweaks to code comments and documentation URL
-1.2 - Added ExpressionEngine 2 compatibility.
-1.1 - Re-branded as a 'Nine Four' plug-in.
-1.0 - Initial Release.
-
 For updates and support check the developers website: https://github.com/nathanpitman/encode_decode.pi.ee_addon
+
 	<?php
 	$buffer = ob_get_contents();
 	
